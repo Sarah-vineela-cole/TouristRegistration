@@ -1,0 +1,25 @@
+<h2> Tourist List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Tourist id</th>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> From Place</th>
+            <th> Gender </th>
+            <th> Age</th>
+            <th> Number of Days</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tourist of tourists" >
+            <td> {{ tourist.id }} </td>
+            <td> {{ tourist.firstname }} </td>
+            <td> {{ tourist.lastname }} </td>
+            <td> {{ tourist.fromplace }} </td>
+            <td> {{ tourist.age }} </td>
+            <td> {{ tourist.gender }} </td>
+            <td> {{ tourist.numberofdays }} </td>
+        </tr>
+    </tbody>
+</table>

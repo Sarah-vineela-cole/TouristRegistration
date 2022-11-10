@@ -1,0 +1,25 @@
+server:
+  port: 9094
+  
+spring:
+  application:
+    name: TOURIST-API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: TOURIST-SERVICE
+        uri:
+          lb://TOURIST-SERVICE
+        predicates:
+        - Path= /tourist/**
+        
+        
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+  
